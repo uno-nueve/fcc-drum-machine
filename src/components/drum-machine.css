@@ -1,0 +1,51 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --main-font: 'Roboto Slab', monospace;
+}
+
+/* Colors */
+:root {
+    --main-color: #272635;
+    --primary-color: #A6A6A8;
+    --secondary-color: #CECECE;
+    --active-color: #E8E9F3;
+    --contrast-color: #B1E5F2;
+}
+
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--main-color);
+    font-family: var(--main-font);
+    color: whitesmoke;
+}
+
+/* Class styles */
+.container {
+    display: grid;
+}
+
+.drum-pad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 100px;
+    background: var(--secondary-color);
+    border: none;
+    border-radius: 25px;
+    font-size: 3rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition:  0.3s ease-in-out, color 0.3s ease-in-out;
+}
