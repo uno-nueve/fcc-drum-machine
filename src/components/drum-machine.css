@@ -31,8 +31,27 @@ body {
 }
 
 /* Class styles */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(201,222,244);
+    background: linear-gradient(73deg, rgba(201,222,244,1) 0%, rgba(245,204,212,1) 50%, rgba(184,164,201,1) 100%); 
+    height: 100vh;
+    width: 100vw;
+}
+
 .container {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 2em;
+    background: var(--primary-color);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.6px);
+    -webkit-backdrop-filter: blur(8.6px);
 }
 
 .drum-pad {
@@ -48,4 +67,69 @@ body {
     font-weight: 700;
     cursor: pointer;
     transition:  0.3s ease-in-out, color 0.3s ease-in-out;
+    box-shadow: 31px 31px 97px -11px rgba(0,0,0,0.63);
+    -webkit-box-shadow: 31px 31px 97px -11px rgba(0,0,0,0.63);
+    -moz-box-shadow: 31px 31px 97px -11px rgba(0,0,0,0.63);
+}
+
+.display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 1;
+    grid-column: 1/4;
+    font-size: 28px;
+    height: 25px;
+    width: 450px;
+    background: var(--main-color);
+    color: var(--active-color);
+    padding: 1.5em;
+    margin: 1em;
+    border-radius: 16px;
+}
+
+.title {
+    font-size: 3em;
+    margin-bottom: 1em;
+    color: var(--main-color);
+}
+
+@media screen and (max-width: 550px) {
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        max-width: 100vw;
+        padding: 1em 1em 3em;
+        background: rgba(255, 255, 255, 0.31);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+    }
+
+    .drum-pad {
+        width: 100px;
+        height: 75px;
+        border-radius: 15px;
+    }
+
+    .display {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-row: 1;
+        grid-column: 1/4;
+        width: 275px;
+        margin-bottom: 2em;
+    }
+
+    .title {
+        margin-top: 2em;
+    }
 }

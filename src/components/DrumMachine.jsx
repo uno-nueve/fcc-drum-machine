@@ -64,7 +64,7 @@ const DrumMachine = () => {
     const [audioName, setAudioName] = useState('');
 
     const toggleStyleActive = (audio) => {
-        audio.parentElement.style.backgroundColor = 'var(--active-color)'
+        audio.parentElement.style.backgroundColor = 'var(--contrast-color)'
         audio.parentElement.style.color = 'var(--main-color)'
     }
 
@@ -87,8 +87,9 @@ const DrumMachine = () => {
     return (
         <div id='drum-machine'>
             <div className='wrapper'>
-                <Display name={audioName} />
+                <h1 className='title'>Drum Machine</h1>
                 <div className='container'>
+                <Display name={audioName} />
                     {pads.map((pad, index) => {
                         return (
                             <Key key={index} pad={pad} playAudio={playAudio} />
