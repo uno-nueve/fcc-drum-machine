@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Key from './Key';
 import Display from './Display';
+import Footer from './Footer';
 import './drum-machine.css'
 
 const pads = [
@@ -96,6 +97,7 @@ const DrumMachine = () => {
                         )
                     })}
                 </div>
+                <Footer />
             </div>
         </div>
     );

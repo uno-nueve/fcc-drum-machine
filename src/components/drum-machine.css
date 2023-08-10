@@ -132,4 +132,9 @@ body {
     .title {
         margin-top: 2em;
     }
+
+    .signature {
+        position: absolute;
+        top: 15px;
+      }
 }
